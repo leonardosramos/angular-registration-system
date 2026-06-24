@@ -10,20 +10,27 @@ import { MatButtonModule } from '@angular/material/button';
 import { Cliente } from './cliente';
 import { ClienteService } from '../cliente.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgxMaskDirective, provideNgxMask } from 'ngx-mask'
 
 @Component({
-  selector: 'app-cadastro',
+    selector: 'app-cadastro',
 
-  imports: [FlexLayoutModule, 
-            MatCardModule,
-            MatFormFieldModule,
-            FormsModule,
-            MatInputModule,
-            MatIconModule,
-            MatButtonModule],
+    imports: [
+        FlexLayoutModule, 
+        MatCardModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        NgxMaskDirective
+    ], 
+    providers: [
+        provideNgxMask()
+    ],
 
-  templateUrl: './cadastro.component.html',
-  styleUrl: './cadastro.component.scss'
+    templateUrl: './cadastro.component.html',
+    styleUrl: './cadastro.component.scss'
 })
 export class CadastroComponent implements OnInit {
 
