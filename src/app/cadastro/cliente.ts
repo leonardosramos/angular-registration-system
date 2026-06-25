@@ -7,6 +7,8 @@ export class Cliente {
     cpf?: string;
     dataNascimento?: Date;
     deletando: Boolean = false;
+    uf?: string;
+    municipio?: string;
 
     static newCliente(){
         const cliente = new Cliente();
